@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang = en>
+    <head>
+        <title> Calendar </title>
+        <link rel="stylesheet" type="text/css" href="calendar.css"> 
+        <script src = "https://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
+    </head>
+
+    <body>
+        <button id = 'loginButton'>LOG IN?</button>
+        <div id = 'login' method = 'post' class = 'modal'>
+            <div class = 'modalcontent'>
+            Username: <input type = 'text' id = 'loginusername' /><br>
+            Password: <input type = 'password' id = 'loginpassword' />
+            <button id = 'loginsubmit'>Submit</button>
+            <button id = 'cancellogin'>Cancel</button>
+        </div>
+        </div>
+
+        <button id = 'registerButton'>REGISTER?</button> 
+        <div id = 'register' method = 'post' class = 'modal'>
+            <div class = 'modalcontent'>
+                Username: <input type = 'text' id = 'registerusername' /><br>
+                Password: <input type = 'password' id = 'registerpassword' />
+                <button id = 'registersubmit'>Submit</button>
+                <button id = 'cancelregister'>Cancel</button>
+        </div>
+        </div>
+        <button id = 'logoutButton'>LOG OUT</button> 
+        
+
+       
+        <div id = 'categories'>
+            <h4> Filter Categories</h2>
+                <input type = 'checkbox' id = 'personal'>Personal
+                <input type = 'checkbox' id = 'work'>Work
+                <input type = 'checkbox' id = 'social'>Social
+                <input type = 'checkbox' id = 'social'>Holiday
+                <input type = 'checkbox' id = 'social'>Other
+        </div>
+
+
+        <div id = 'navigation'>
+            <button id = leftmonth>&lt; Previous</button> <button id = 'rightmonth'>Next &gt;</button>
+        </div>
+        <button id = "neweventbutton">New Event</button>
+        <div id = 'addevent' class = 'modal'>
+            <div class = 'modalcontent'>
+            <span> Add a New Event</span><br>
+            Title: <input type = 'text' name = 'eventtitle'><br>
+            Date: <input type = 'date' name = 'eventdate'><br>
+            Time: <input type = 'time' name = 'eventtime'><br>
+
+            Category: <br>
+            <select id = 'neweventcategory' class='neweventdropdown'>
+                <option value = 'Personal'>Personal</option>
+                <option value = 'Work'>Work</option>
+                <option value = 'Social'>Social</option>
+                <option value = 'Holiday'>Holiday</option>
+                <option value = 'Other'>Other</option>
+            </select> <br>
+            
+            <button id = 'cancelnewevent'>Cancel</button>
+            <button id = 'neweventsubmit'>Submit</button>
+        </div>
+        </div>
+
+        
+        <div id = 'editevent' class = 'modal'>
+            <div class = 'modalcontent'>
+            <span> Edit Event</span><br>
+            Title: <input type = 'text' name = 'editeventtitle'><br>
+            Date: <input type = 'date' name = 'editeventdate'><br>
+            Time: <input type = 'time' name = 'editeventtime'><br>
+
+            Category: <br>
+            <select id = 'editeventcategory'>
+                <option value = 'personal'>Personal</option>
+                <option value = 'work'>Work</option>
+                <option value = 'social'>Social</option>
+            </select> <br>
+            <button id = 'canceleditevent'>Cancel</button>
+            <button id = 'editeventsubmit'>Submit</button>
+
+        </div>
+        </div>
+
+        <div id = 'monthhere'>
+        </div>
+
+        <div id = 'weekdaynames'>
+            <table width = 100%>
+        <thead>
+                <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                </tr>
+                </thead>
+                </table>
+        </div>
+        <div id = 'calendartable'>
+        <table id = 'caltable' width = 100%>            
+        </table>
+        </div>
+    </body>
+    
+    <script type="text/javascript" src="users.js"></script>
+    <script type="text/javascript" src="calendar.js"></script>
+    <script type="text/javascript" src="updatepage.js"></script>
+    
+    <script src = "https://classes.engineering.wustl.edu/cse330/content/calendar.min.js"></script>
+
+</html>
